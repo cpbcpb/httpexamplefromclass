@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {JokeService} from './services/joke.service'
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+
+  joke: any;
+  constructor(private jokes: JokeService) { }
+
+  ngOnInit() {}
+
+  getRandomJoke() {
+    this.jokes.getRandom()
+      .subscribe((joke) => this.joke = joke);
+  }
+
+
 }

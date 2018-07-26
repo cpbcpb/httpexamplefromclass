@@ -1,0 +1,20 @@
+.whole-page{
+height: 100vh;
+background-image: url("../images/chuck.jpg");
+background-repeat: no-repeat;
+background-position:bottom center;
+background-size: contain;
+}
+
+.joke{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    word-wrap: normal;
+    background: white;
+    size:20px;
+}
+.joke pre{
+    display:flex;
+    
+}
